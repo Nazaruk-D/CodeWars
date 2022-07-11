@@ -12,104 +12,128 @@
 
 </head>
 <body>
-<div class="hi"></div>
-<!--<script> // Меньшее + большее значение из функции-->
-<!--function minMaxFun(arr) {-->
-<!--    let returnAll = [];-->
-<!--    let min = arr[0];-->
-<!--    let max = arr[0];-->
+<div>
+    <!--function minMaxFun(arr) {-->
+    <!--    let returnAll = [];-->
+    <!--    let min = arr[0];-->
+    <!--    let max = arr[0];-->
 
-<!--    for (let i = 0; i < arr.length; i++) {-->
-<!--        if (arr[i] > max) {-->
-<!--            max = arr[i];-->
-<!--        }-->
-<!--        if (arr[i] < min) {-->
-<!--            min = arr[i];-->
-<!--        }-->
-<!--    }-->
-<!--    returnAll.push(min);-->
-<!--    returnAll.push(max);-->
-<!--    return returnAll;-->
-<!--}-->
+    <!--    for (let i = 0; i < arr.length; i++) {-->
+    <!--        if (arr[i] > max) {-->
+    <!--            max = arr[i];-->
+    <!--        }-->
+    <!--        if (arr[i] < min) {-->
+    <!--            min = arr[i];-->
+    <!--        }-->
+    <!--    }-->
+    <!--    returnAll.push(min);-->
+    <!--    returnAll.push(max);-->
+    <!--    return returnAll;-->
+    <!--}-->
 
-<!--let a = minMaxFun([-21, 2, 3, 4, 5, 6, 7, 2342348]);-->
-<!--console.log(a);-->
-<!--</script>-->  1. Меньшее + большее значение из массива в отдельный массив
-<!--<script>-->
-<!--    function sumAllNumbers() {-->
-<!--        let a = 1;-->
-<!--        let b = 1;-->
-<!--        let x = [];-->
+    <!--let a = minMaxFun([-21, 2, 3, 4, 5, 6, 7, 2342348]);-->
+    <!--console.log(a);-->
+    <!--</script>--> </div>
+1. Меньшее + большее значение из массива в отдельный массив
+<div><!--<script>-->
+    <!--    function sumAllNumbers() {-->
+    <!--        let a = 1;-->
+    <!--        let b = 1;-->
+    <!--        let x = [];-->
 
-<!--        if (a === b) {-->
-<!--            return a;-->
-<!--        }-->
+    <!--        if (a === b) {-->
+    <!--            return a;-->
+    <!--        }-->
 
-<!--        if (a < b) {-->
-<!--            let y = a;-->
-<!--            x = x.push(a,b);-->
-<!--            for (a; a < b; a++) {-->
-<!--                // debugger-->
-<!--                y += a + 1;-->
-<!--            }-->
-<!--            return y;-->
-<!--        }-->
+    <!--        if (a < b) {-->
+    <!--            let y = a;-->
+    <!--            x = x.push(a,b);-->
+    <!--            for (a; a < b; a++) {-->
+    <!--                // debugger-->
+    <!--                y += a + 1;-->
+    <!--            }-->
+    <!--            return y;-->
+    <!--        }-->
 
-<!--        if (b < a) {-->
-<!--            let y = b;-->
-<!--            x = x.push(b,a);-->
-<!--            for (b; b < a; b++) {-->
-<!--                // debugger-->
-<!--                y += b + 1;-->
-<!--            }-->
-<!--            return y;-->
-<!--        }-->
+    <!--        if (b < a) {-->
+    <!--            let y = b;-->
+    <!--            x = x.push(b,a);-->
+    <!--            for (b; b < a; b++) {-->
+    <!--                // debugger-->
+    <!--                y += b + 1;-->
+    <!--            }-->
+    <!--            return y;-->
+    <!--        }-->
 
-<!--    }-->
+    <!--    }-->
 
-<!--    console.log(sumAllNumbers());-->
+    <!--    console.log(sumAllNumbers());-->
 
-<!--    // const GetSum = (a, b) => {    краткое решение))))-->
-<!--    //     let min = Math.min(a, b),-->
-<!--    //         max = Math.max(a, b);-->
-<!--    //     return (max - min + 1) * (min + max) / 2;-->
-<!--    // }-->
+    <!--    // const GetSum = (a, b) => {    краткое решение))))-->
+    <!--    //     let min = Math.min(a, b),-->
+    <!--    //         max = Math.max(a, b);-->
+    <!--    //     return (max - min + 1) * (min + max) / 2;-->
+    <!--    // }-->
 
-<!-- -->
-<!--    // function GetSum( a,b )   краткое решение моим способом-->
-<!--    // {-->
-<!--    //     if (a == b) return a;-->
-<!--    //     else if (a < b) return a + GetSum(a+1, b);-->
-<!--    //     else return a + GetSum(a-1,b);-->
-<!--    // }-->
-<!--</script>--> 2. Из двух приходящих чисел нужно вернуть сумму между ними, если равные, то вернуть это число
-<!--<script>-->
-<!--    function merge(line) {-->
-<!--        let a = 0-->
-<!--        for (let i = 0; i < line.length; i++) {-->
-<!--            if (line[i] === 0) {-->
-<!--                line.splice(i, 1)-->
-<!--                a++-->
-<!--                i&#45;&#45;-->
-<!--            }-->
-<!--        }-->
-<!--        for (let i = 0; i < line.length; i = i + 1) {-->
-<!--            if (line[i] === line[i + 1]) {-->
-<!--                line[i] *= 2-->
-<!--                line.splice(i + 1, 1)-->
-<!--                a++-->
-<!--            }-->
-<!--        }-->
-<!--        for (let i = 0; i < a; i++) {-->
-<!--            line.push(0)-->
-<!--        }-->
-<!--        return line-->
-<!--    }-->
-<!--    let x = [ 32, 4, 4, 32, 16, 32, 8, 0, 0, 0 ];-->
-<!--    merge(x)-->
-<!--    console.log(x);-->
-<!--</script>--> 3. Логика игры 2048
-<script></script>
+    <!-- -->
+    <!--    // function GetSum( a,b )   краткое решение моим способом-->
+    <!--    // {-->
+    <!--    //     if (a == b) return a;-->
+    <!--    //     else if (a < b) return a + GetSum(a+1, b);-->
+    <!--    //     else return a + GetSum(a-1,b);-->
+    <!--    // }-->
+    <!--</script>-->
+</div>
+2. Из двух приходящих чисел нужно вернуть сумму между ними, если равные, то вернуть это число
+<div><!--<script>-->
+    <!--    function merge(line) {-->
+    <!--        let a = 0-->
+    <!--        for (let i = 0; i < line.length; i++) {-->
+    <!--            if (line[i] === 0) {-->
+    <!--                line.splice(i, 1)-->
+    <!--                a++-->
+    <!--                i&#45;&#45;-->
+    <!--            }-->
+    <!--        }-->
+    <!--        for (let i = 0; i < line.length; i = i + 1) {-->
+    <!--            if (line[i] === line[i + 1]) {-->
+    <!--                line[i] *= 2-->
+    <!--                line.splice(i + 1, 1)-->
+    <!--                a++-->
+    <!--            }-->
+    <!--        }-->
+    <!--        for (let i = 0; i < a; i++) {-->
+    <!--            line.push(0)-->
+    <!--        }-->
+    <!--        return line-->
+    <!--    }-->
+    <!--    let x = [ 32, 4, 4, 32, 16, 32, 8, 0, 0, 0 ];-->
+    <!--    merge(x)-->
+    <!--    console.log(x);-->
+    <!--</script>--> </div>
+3. Логика игры 2048
+<div class="div-3">
+    <button class="b-3"/>
+    Click</button>
+    <script>
+        function calc(x){
+            var total1 = []
+            var x = x.split("")
+            for(var i=0;i<x.length;i++){
+                total1.push(x[i].charCodeAt(0))
+            }
+            total1 = total1.join("")
+            var total2 = total1.replace(/7/g,1)
+            total1 = total1.split("").map(Number)
+            total2 = total2.split("").map(Number)
+            return total1.reduce(function(a,b){return a+b})-total2.reduce(function(a,b){return a+b})
+        }
+        console.log(calc('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'))
+
+    </script>
+
+</div>
+4. CharCodeAt + логика
 
 </body>
 </html>

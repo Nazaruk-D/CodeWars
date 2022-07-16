@@ -154,6 +154,18 @@
 </div>
 5. Две функции (сложение, умножение). Необходимо сделать функцию, которая поочередно выполняет действия с входящим
 числом (Chain me)
+<div>
+    <script>
+        const array3 = [1, 5, 3, 7];
+
+        function redistributeWealth(wealth) {
+            let sum = wealth.reduce((acc, el) => (acc + el), 0);
+            wealth.fill(sum / wealth.length);
+        }
+        console.log((redistributeWealth(array3)))
+    </script>
+</div>
+6. Нужно взять массив, и заменить значение на среднее по всему массиву (Wealth equality, finally!)
 
 </body>
 </html>

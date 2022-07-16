@@ -113,27 +113,47 @@
     <!--</script>--> </div>
 3. Логика игры 2048
 <div class="div-3">
-    <button class="b-3"/>
-    Click</button>
-    <script>
-        function calc(x){
-            var total1 = []
-            var x = x.split("")
-            for(var i=0;i<x.length;i++){
-                total1.push(x[i].charCodeAt(0))
-            }
-            total1 = total1.join("")
-            var total2 = total1.replace(/7/g,1)
-            total1 = total1.split("").map(Number)
-            total2 = total2.split("").map(Number)
-            return total1.reduce(function(a,b){return a+b})-total2.reduce(function(a,b){return a+b})
-        }
-        console.log(calc('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'))
+    <!--    <button class="b-3"/>-->
+    <!--    Click</button>-->
+    <!--    <script>-->
+    <!--        function calc(x){-->
+    <!--            var total1 = []-->
+    <!--            var x = x.split("")-->
+    <!--            for(var i=0;i<x.length;i++){-->
+    <!--                total1.push(x[i].charCodeAt(0))-->
+    <!--            }-->
+    <!--            total1 = total1.join("")-->
+    <!--            var total2 = total1.replace(/7/g,1)-->
+    <!--            total1 = total1.split("").map(Number)-->
+    <!--            total2 = total2.split("").map(Number)-->
+    <!--            return total1.reduce(function(a,b){return a+b})-total2.reduce(function(a,b){return a+b})-->
+    <!--        }-->
+    <!--        console.log(calc('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'))-->
 
     </script>
 
 </div>
 4. CharCodeAt + логика
+<div>
+    <!--    <script>-->
+    <!--        function chain(x, fs) {-->
+    <!--            return fs.reduce(function(x, fs) { return fs(x) }, x);-->
+    <!--        }-->
+
+    <!--        function add(x) {-->
+    <!--            // debugger-->
+    <!--            return x + 10;-->
+    <!--        }-->
+
+    <!--        function mult(x) {-->
+    <!--            // debugger-->
+    <!--            return x * 30;-->
+    <!--        }-->
+    <!--        console.log(chain(2, [add, mult]));-->
+    <!--    </script>-->
+</div>
+5. Две функции (сложение, умножение). Необходимо сделать функцию, которая поочередно выполняет действия с входящим
+числом (Chain me)
 
 </body>
 </html>

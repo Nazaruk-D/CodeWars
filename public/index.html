@@ -262,17 +262,32 @@
 13. (8ky)
 <div>
     <script>
-        function countBy(x, n) {
-            let z = [];
-            for (let i = x; i < n * x + 1; i = i + x) {
-                z.push(i)
-            }
-            return z;
-        }
-        console.log(countBy(1,10))
-        console.log(countBy(2,5))
+        // function countBy(x, n) {
+        //     let z = [];
+        //     for (let i = x; i < n * x + 1; i = i + x) {
+        //         z.push(i)
+        //     }
+        //     return z;
+        // }
+        // console.log(countBy(1,10))
+        // console.log(countBy(2,5))
     </script>
 </div>
 14. Count by X(8ky)
+<div>
+    <script>
+        function sumMix(x){
+            let z = 0;
+            for (let i = 0; i < x.length; i++) {
+                let a = Number(x[i]);
+                z += a;
+            }
+            return z;
+        }
+
+        console.log(sumMix([9, 3, '7', '3']))
+    </script>
+</div>
+15. Sum Mixed Array(8ky)
 </body>
 </html>

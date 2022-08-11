@@ -276,18 +276,50 @@
 14. Count by X(8ky)
 <div>
     <script>
-        function sumMix(x){
-            let z = 0;
-            for (let i = 0; i < x.length; i++) {
-                let a = Number(x[i]);
-                z += a;
-            }
-            return z;
-        }
-
-        console.log(sumMix([9, 3, '7', '3']))
+        // function sumMix(x){
+        //     let z = 0;
+        //     for (let i = 0; i < x.length; i++) {
+        //         let a = Number(x[i]);
+        //         z += a;
+        //     }
+        //     return z;
+        // }
+        //
+        // console.log(sumMix([9, 3, '7', '3']))
     </script>
 </div>
 15. Sum Mixed Array(8ky)
+<div>
+    <script>
+        function sumArray(array) {
+            let x = array.indexOf(Math.max);
+            array.splice(x, 1)
+            return array
+        }
+
+        console.log(sumArray([11, 1, 16, 0, 10]))
+    </script>
+</div>
+16. Sum without highest and lowest number(8ky)
+<div>
+        <script>
+            export function getBanknoteList(amountOfMoney) {
+                const result = []
+                const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
+                if (amountOfMoney > 0 ) {
+                    for (let i = 0; i < banknotes.length; i++) {
+                        let note = banknotes[i];
+                        while (amountOfMoney - note >= 0) {
+                            amountOfMoney -= note;
+                            result.push(note);
+                        }
+                    }
+                }
+                return result;
+            }
+            console.log(getBanknoteList(1200))
+        </script>
+    </div>
+    17. ATM
 </body>
 </html>

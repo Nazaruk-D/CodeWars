@@ -358,8 +358,22 @@
         function squareDigits(num) {
             return Number(num.toString().split("").map(u => u * u).join(""));
         }
+
         // console.log(squareDigits(3212)) //9414
     </script>
 </div>
+21. Highest and Lowest (7ky)
+<div>
+    <script>
+        function highAndLow(numbers) {
+            let arr = numbers.replace(/ /ig, ',').split(",")
+            let min = arr.sort((a, b) => a - b)[0]
+            let max = arr.sort((a, b) => b - a)[0]
+            return `${max} ${min}`
+        }
+        // console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+    </script>
+</div>
+
 </body>
 </html>

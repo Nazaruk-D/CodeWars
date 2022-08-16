@@ -341,6 +341,17 @@
         // console.log(getCount("abracadabra"))
     </script>
 </div>
+19.Disemvowel Trolls (7ky)
+<div>
+    <script>
+        function disemvowel(str) {
+            return str.split('').filter(c => "aeiouAEIOU".includes(c) ? "" : c).join("");
+            // return str.replace(/[aeiou]/gi, ''); // альтернативное решение
+        }
+
+        // console.log(disemvowel("This website is for losers LOL!"))
+    </script>
+</div>
 
 </body>
 </html>

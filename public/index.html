@@ -12,6 +12,7 @@
 
 </head>
 <body>
+1. Меньшее + большее значение из массива в отдельный массив
 <div>
     <!--function minMaxFun(arr) {-->
     <!--    let returnAll = [];-->
@@ -34,7 +35,7 @@
     <!--let a = minMaxFun([-21, 2, 3, 4, 5, 6, 7, 2342348]);-->
     <!--console.log(a);-->
     <!--</script>--> </div>
-1. Меньшее + большее значение из массива в отдельный массив
+2. Из двух приходящих чисел нужно вернуть сумму между ними, если равные, то вернуть это число
 <div><!--<script>-->
     <!--    function sumAllNumbers() {-->
     <!--        let a = 1;-->
@@ -84,7 +85,7 @@
     <!--    // }-->
     <!--</script>-->
 </div>
-2. Из двух приходящих чисел нужно вернуть сумму между ними, если равные, то вернуть это число
+3. Логика игры 2048
 <div><!--<script>-->
     <!--    function merge(line) {-->
     <!--        let a = 0-->
@@ -111,7 +112,7 @@
     <!--    merge(x)-->
     <!--    console.log(x);-->
     <!--</script>--> </div>
-3. Логика игры 2048
+4. CharCodeAt + логика
 <div class="div-3">
     <!--    <button class="b-3"/>-->
     <!--    Click</button>-->
@@ -133,7 +134,8 @@
     </script>
 
 </div>
-4. CharCodeAt + логика
+5. Две функции (сложение, умножение). Необходимо сделать функцию, которая поочередно выполняет действия с входящим
+числом (Chain me)
 <div>
     <!--    <script>-->
     <!--        function chain(x, fs) {-->
@@ -152,8 +154,7 @@
     <!--        console.log(chain(2, [add, mult]));-->
     <!--    </script>-->
 </div>
-5. Две функции (сложение, умножение). Необходимо сделать функцию, которая поочередно выполняет действия с входящим
-числом (Chain me)
+6. Нужно взять массив, и заменить значение на среднее по всему массиву (Wealth equality, finally!)
 <div>
     <!--    <script>-->
     <!--        const array3 = [1, 5, 3, 7];-->
@@ -165,7 +166,7 @@
     <!--        redistributeWealth(array3)-->
     <!--    </script>-->
 </div>
-6. Нужно взять массив, и заменить значение на среднее по всему массиву (Wealth equality, finally!)
+7.Сумма положительных цифр из массива. Sum of positive (8ky)
 <div>
     <script>
         // let array = [-1,2,3,4,-5];
@@ -184,7 +185,7 @@
         // console.log(positiveSum(array));
     </script>
 </div>
-7.Сумма положительных цифр из массива. Sum of positive (8ky)
+8. Перевести число в противоположное значение +/- (8ky)
 <div>
     <!--    <script>-->
     <!--        function opposite(number) {-->
@@ -199,7 +200,7 @@
     <!--        console.log(opposite(555.555))-->
     <!--    </script>-->
 </div>
-8. Перевести число в противоположное значение +/- (8ky)
+9. Вернуть отрицательное число. Return Negative (8ky)
 <div>
     <!--    <script>-->
     <!--        function makeNegative(num) {-->
@@ -208,7 +209,7 @@
     <!--        console.log(makeNegative(0))-->
     <!--    </script>-->
 </div>
-9. Вернуть отрицательное число. Return Negative (8ky)
+10. Century From Year (8ky)
 <div>
     <script>
         // function century(year) {
@@ -218,7 +219,7 @@
         // console.log(century(1900))
     </script>
 </div>
-10. Century From Year (8ky)
+11. (8ky)
 <div>
     <script>
         // function maps(x){
@@ -228,7 +229,7 @@
 
     </script>
 </div>
-11. (8ky)
+12. (8ky)
 <div>
     <script>
         // function betterThanAverage(classPoints, yourPoints) {
@@ -242,7 +243,7 @@
         // console.log(betterThanAverage([2,3], 5))
     </script>
 </div>
-12. (8ky)
+13. (8ky)
 <div>
     <script>
         // function oddCount(n) {
@@ -259,7 +260,7 @@
         // console.log(oddCount(11))
     </script>
 </div>
-13. (8ky)
+14. Count by X(8ky)
 <div>
     <script>
         // function countBy(x, n) {
@@ -273,7 +274,7 @@
         // console.log(countBy(2,5))
     </script>
 </div>
-14. Count by X(8ky)
+15. Sum Mixed Array(8ky)
 <div>
     <script>
         // function sumMix(x){
@@ -288,7 +289,7 @@
         // console.log(sumMix([9, 3, '7', '3']))
     </script>
 </div>
-15. Sum Mixed Array(8ky)
+16. Sum without highest and lowest number(8ky)
 <div>
     <script>
         function sumArray(array) {
@@ -297,29 +298,49 @@
             return array
         }
 
-        console.log(sumArray([11, 1, 16, 0, 10]))
+        // console.log(sumArray([11, 1, 16, 0, 10]))
     </script>
 </div>
-16. Sum without highest and lowest number(8ky)
+17. ATM
 <div>
-        <script>
-            export function getBanknoteList(amountOfMoney) {
-                const result = []
-                const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
-                if (amountOfMoney > 0 ) {
-                    for (let i = 0; i < banknotes.length; i++) {
-                        let note = banknotes[i];
-                        while (amountOfMoney - note >= 0) {
-                            amountOfMoney -= note;
-                            result.push(note);
-                        }
+    <script>
+        function getBanknoteList(amountOfMoney) {
+            const result = []
+            const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
+            if (amountOfMoney > 0) {
+                for (let i = 0; i < banknotes.length; i++) {
+                    let note = banknotes[i];
+                    while (amountOfMoney - note >= 0) {
+                        amountOfMoney -= note;
+                        result.push(note);
                     }
                 }
-                return result;
             }
-            console.log(getBanknoteList(1200))
-        </script>
-    </div>
-    17. ATM
+            return result;
+        }
+
+        // console.log(getBanknoteList(1200))
+    </script>
+</div>
+18.Vowel Count (7ky)
+<div>
+    <script>
+        function getCount(str) {
+            let sum = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === "a" | str[i] === "e" | str[i] === "i" | str[i] === "o" | str[i] === "u") {
+                    sum += 1;
+                }
+            }
+            return sum;
+        }
+
+        // return (str.match(/[aeiou]/ig)||[]).length; // алтернативное решение
+        // return str.split('').filter(c => "aeiouAEIOU".includes(c)).length; // алтернативное решение
+
+        // console.log(getCount("abracadabra"))
+    </script>
+</div>
+
 </body>
 </html>

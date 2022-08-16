@@ -374,6 +374,26 @@
         // console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
     </script>
 </div>
+22. Jaden Casing Strings (7ky)
+<div>
+    <script>
+
+        function f1(str) {
+            let newStr = "";
+            for (let i = 0; i < str.length; i++) {
+                if ( str[i] === " ") {
+                    newStr += " " + str[i+1].toUpperCase()
+                    i++
+                }
+                else {
+                    newStr += str[i]
+                }
+            }
+            return newStr;
+        }
+        console.log(f1("How can mirrors be real if our eyes aren't real"));
+    </script>
+</div>
 
 </body>
 </html>

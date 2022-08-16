@@ -391,9 +391,26 @@
             }
             return newStr;
         }
-        console.log(f1("How can mirrors be real if our eyes aren't real"));
+        // console.log(f1("How can mirrors be real if our eyes aren't real"));
     </script>
 </div>
-
+23. Isograms (7ky)
+<div>
+    <script>
+        function isIsogram(str){
+            let newStr = str.toLowerCase()
+            for (let i = 0; i < newStr.length; i++) {
+                for (let j = i + 1; j < newStr.length; j++) {
+                    if (newStr[i] === newStr[j]) {
+                        return false;
+                    }
+                }
+            }
+            return true
+        }
+        // return new Set(str.toUpperCase()).size == str.length; // альиернаитивное решение
+        // console.log(isIsogram("ab"))
+    </script>
+</div>
 </body>
 </html>

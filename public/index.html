@@ -371,6 +371,7 @@
             let max = arr.sort((a, b) => b - a)[0]
             return `${max} ${min}`
         }
+
         // console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
     </script>
 </div>
@@ -381,23 +382,23 @@
         function f1(str) {
             let newStr = "";
             for (let i = 0; i < str.length; i++) {
-                if ( str[i] === " ") {
-                    newStr += " " + str[i+1].toUpperCase()
+                if (str[i] === " ") {
+                    newStr += " " + str[i + 1].toUpperCase()
                     i++
-                }
-                else {
+                } else {
                     newStr += str[i]
                 }
             }
             return newStr;
         }
+
         // console.log(f1("How can mirrors be real if our eyes aren't real"));
     </script>
 </div>
 23. Isograms (7ky)
 <div>
     <script>
-        function isIsogram(str){
+        function isIsogram(str) {
             let newStr = str.toLowerCase()
             for (let i = 0; i < newStr.length; i++) {
                 for (let j = i + 1; j < newStr.length; j++) {
@@ -408,6 +409,7 @@
             }
             return true
         }
+
         // return new Set(str.toUpperCase()).size == str.length; // альиернаитивное решение
         // console.log(isIsogram("ab"))
     </script>
@@ -415,7 +417,7 @@
 24. You're a square! (7ky)
 <div>
     <script>
-        var isSquare = function(n){
+        var isSquare = function (n) {
             return Math.sqrt(n) === Math.trunc(Math.sqrt(n))
         }
         // console.log(isSquare(-2))
@@ -454,6 +456,25 @@
         // }
         // //   return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-'); алтернативное короткое решение
         // console.log(accum("ZpglnRxqenU"))
+    </script>
+</div>
+27. Factorial + RangeError (7ky)
+<div>
+    <script>
+        function factorial(n) {
+            // debugger
+            let sum = 1
+            if (n < 0 || n > 12) {
+                throw new RangeError('error')
+            }
+            else if  (n === 0 || n === 1) {
+                return sum
+            } else {
+                return n * factorial(n - 1)
+            }
+        }
+
+        console.log(factorial(-3))
     </script>
 </div>
 </body>

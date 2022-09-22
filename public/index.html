@@ -502,6 +502,7 @@
             }
             return y
         }
+
         // 1 + 3 + 5 = 9
         // 9 + 7 + 9 + 11 + 13 = 49
         // console.log(rowSumOddNumbers(6))
@@ -515,22 +516,42 @@
 <div>
     <script>
         const number = (arr) => {
-            let x = 0;
-            let newArray = arr.map( n => {
-                x += + n[0]
-                x -= + n[1]
-            } )
-            return x
+            let sumPeople = 0;
+            let newArray = arr.map(n => {
+                sumPeople += +n[0]
+                sumPeople -= +n[1]
+            })
+            return sumPeople
         }
-        console.log(number([[10,0],[3,5],[5,8]])) //5
+        // console.log(number([[10,0],[3,5],[5,8]])) //5
         // моё - второе решение, первое - const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
     </script>
 </div>
 31. Is this a triangle? (7ky)
 <div>
     <script>
-        function isTriangle(a,b,c) { return !!(a + b > c & a + c > b & b + c > a) }
-        console.log(isTriangle(2,2,5))
+        function isTriangle(a, b, c) {
+            return !!(a + b > c & a + c > b & b + c > a)
+        }
+
+        // console.log(isTriangle(2,2,5))
+    </script>
+</div>
+32. Tidy Number (Special Numbers Series #9) (7ky)
+<div>
+    <script>
+        function tidyNumber(n) {
+            let num = 0;
+            let x = n.toString(10).split('').map(int => parseInt(int, 10))
+            for (let i = 0; i < x.length - 1; i++) {
+                if (x[i] > x[i + 1]) {
+                    num = 1
+                }
+            }
+            return num !== 1;
+        }
+        console.log(tidyNumber(256))
+        console.log(tidyNumber(634))
     </script>
 </div>
 </body>

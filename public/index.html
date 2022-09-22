@@ -550,8 +550,25 @@
             }
             return num !== 1;
         }
-        console.log(tidyNumber(256))
-        console.log(tidyNumber(634))
+        // console.log(tidyNumber(256))
+        // console.log(tidyNumber(634))
+    </script>
+</div>
+33. Build a square (7ky)
+<div>
+    <script>
+        function generateShape(integer){
+            let string = "";
+            for (let i = 0; i < integer; i++) {
+                for (let j = 0; j < integer; j++) {
+                    string += "+";
+                }
+                if (i !== integer - 1) string += "\n";
+            }
+                    return string;
+        }
+        // краткое решение   return ("+".repeat(n)+"\n").repeat(n).trim()
+        console.log(generateShape(3))
     </script>
 </div>
 </body>

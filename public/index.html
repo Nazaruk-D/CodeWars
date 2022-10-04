@@ -568,7 +568,35 @@
                     return string;
         }
         // краткое решение   return ("+".repeat(n)+"\n").repeat(n).trim()
-        console.log(generateShape(3))
+        // console.log(generateShape(3))
+    </script>
+</div>
+34. Get the Middle Character (7ky)
+<div>
+    <script>
+        function getMiddle(s) {
+            let string = ""
+            let length = Math.round(s.length / 2)
+            if (s.length % 2 === 0 ) {
+                for (let i = length - 1; i < length + 1; i++) {
+                    string += s[i];
+                }
+                return string
+            } else {
+                for (let i = length-1; i <= length-1; i++) {
+                    string += s[i];
+                }
+                return string
+            }
+        }
+        //короткое решение  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+        //короткое решение №2
+        // var middle = s.length / 2;
+        // return (s.length % 2)
+        //     ? s.charAt(Math.floor(middle))
+        //     : s.slice(middle - 1, middle + 1);
+        // console.log(getMiddle("middle"))
+        // console.log(getMiddle("testing"))
     </script>
 </div>
 </body>

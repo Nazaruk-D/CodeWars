@@ -608,5 +608,29 @@
         // console.log(filter_list([1,2]))
     </script>
 </div>
+36. Exes and Ohs (7ky)
+<div>
+    <script>
+        function XO(str) {
+            let x = 0;
+            let o = 0;
+            for (let i = 0; i < str.length; i++) {
+                if(str[i].toLowerCase() === "x") {
+                    x++
+                }
+                else if(str[i].toLowerCase() === "o") {
+                    o++
+                }
+            }
+            return x === o
+        }
+        //короткое решение:
+        // let x = str.match(/x/gi);
+        // let o = str.match(/o/gi);
+        // return (x && x.length) === (o && o.length);
+        // console.log(XO("ooxx"))
+        // console.log(XO("oozz"))
+    </script>
+</div>
 </body>
 </html>

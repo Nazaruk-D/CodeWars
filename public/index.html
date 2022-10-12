@@ -664,5 +664,17 @@
         // console.log(longest("loopingisfunbutdangerous", "lessdangerousthancoding"))
     </script>
 </div>
+39. Sum of two lowest positive integers (7ky)
+<div>
+    <script>
+        function sumTwoSmallestNumbers(numbers) {
+            let newArr = numbers.sort((a,b)=> a - b)
+            return newArr[0] + newArr[1]
+        }
+
+        // console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]))
+        // console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]))
+    </script>
+</div>
 </body>
 </html>

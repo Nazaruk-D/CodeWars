@@ -550,6 +550,7 @@
             }
             return num !== 1;
         }
+
         // console.log(tidyNumber(256))
         // console.log(tidyNumber(634))
     </script>
@@ -557,7 +558,7 @@
 33. Build a square (7ky)
 <div>
     <script>
-        function generateShape(integer){
+        function generateShape(integer) {
             let string = "";
             for (let i = 0; i < integer; i++) {
                 for (let j = 0; j < integer; j++) {
@@ -565,8 +566,9 @@
                 }
                 if (i !== integer - 1) string += "\n";
             }
-                    return string;
+            return string;
         }
+
         // краткое решение   return ("+".repeat(n)+"\n").repeat(n).trim()
         // console.log(generateShape(3))
     </script>
@@ -577,18 +579,19 @@
         function getMiddle(s) {
             let string = ""
             let length = Math.round(s.length / 2)
-            if (s.length % 2 === 0 ) {
+            if (s.length % 2 === 0) {
                 for (let i = length - 1; i < length + 1; i++) {
                     string += s[i];
                 }
                 return string
             } else {
-                for (let i = length-1; i <= length-1; i++) {
+                for (let i = length - 1; i <= length - 1; i++) {
                     string += s[i];
                 }
                 return string
             }
         }
+
         //короткое решение  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
         //короткое решение №2
         // var middle = s.length / 2;
@@ -603,8 +606,9 @@
 <div>
     <script>
         function filter_list(l) {
-            return l.filter( el => typeof(el === 'number'))
+            return l.filter(el => typeof (el === 'number'))
         }
+
         // console.log(filter_list([1,2]))
     </script>
 </div>
@@ -615,21 +619,38 @@
             let x = 0;
             let o = 0;
             for (let i = 0; i < str.length; i++) {
-                if(str[i].toLowerCase() === "x") {
+                if (str[i].toLowerCase() === "x") {
                     x++
-                }
-                else if(str[i].toLowerCase() === "o") {
+                } else if (str[i].toLowerCase() === "o") {
                     o++
                 }
             }
             return x === o
         }
+
         //короткое решение:
         // let x = str.match(/x/gi);
         // let o = str.match(/o/gi);
         // return (x && x.length) === (o && o.length);
         // console.log(XO("ooxx"))
         // console.log(XO("oozz"))
+    </script>
+</div>
+37. Shortest Word (7ky)
+<div>
+    <script>
+        function findShort(s) {
+            let arr = s.split(' ');
+            let min = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].length < min) {
+                    min = arr[i].length
+                }
+            }
+            return min
+        }
+        // console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+        // console.log(findShort("Let's travel abroad shall we"))
     </script>
 </div>
 </body>

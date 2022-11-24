@@ -692,6 +692,33 @@
             return data.map( m => (m[0] > 54 && m[1] > 7 ) ? "Senior" : "Open")
         }
         // console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]))
+        // return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+    </script>
+</div>
+42. Printer Errors (7ky)
+<div>
+    <script>
+        function printerError(s) {
+            const sum = Array.from(s).length
+            const err = Array.from(s).sort().join().match(/[n-z]/gi)
+            if(err === null) {
+                return `0/${sum}`
+            }
+            return `${err.length}/${sum}`
+        }
+
+        // var count = 0;
+        // for(var i = 0; i < s.length; i++) {
+        //     if (s[i] > "m") {
+        //         count++;
+        //     }
+        // }
+        // return count+"/"+s.length;
+
+        //по буквам тоже можно пробегаться со знаками > <
+
+
+        // console.log(printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmy"))
     </script>
 </div>
 

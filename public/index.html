@@ -721,6 +721,14 @@
         // console.log(printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmy"))
     </script>
 </div>
-
+43. Regex validate PIN code (7ky)
+<div>
+    <script>
+        function validatePIN (pin) {
+            return !!pin.match(/^(\d{4}|\d{6})$/)
+        }
+        // return /^(\d{4}|\d{6})$/.test(pin)
+    </script>
+</div>
 </body>
 </html>

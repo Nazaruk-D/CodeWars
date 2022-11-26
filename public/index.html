@@ -649,6 +649,7 @@
             }
             return min
         }
+
         // console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
         // console.log(findShort("Let's travel abroad shall we"))
     </script>
@@ -657,7 +658,7 @@
 <div>
     <script>
         function longest(s1, s2) {
-            return [...new Set(s1+s2)].sort().join('')
+            return [...new Set(s1 + s2)].sort().join('')
         }
 
         // console.log(longest("aretheyhere", "yestheyarehere"))
@@ -668,7 +669,7 @@
 <div>
     <script>
         function sumTwoSmallestNumbers(numbers) {
-            let newArr = numbers.sort((a,b)=> a - b)
+            let newArr = numbers.sort((a, b) => a - b)
             return newArr[0] + newArr[1]
         }
 
@@ -679,18 +680,20 @@
 40. Friend or Foe? (7ky)
 <div>
     <script>
-        function friend(friends){
-            return friends.filter( f => f.length === 4)
+        function friend(friends) {
+            return friends.filter(f => f.length === 4)
         }
+
         // console.log(friend(["Ryan", "Kieran", "Mark"]))
     </script>
 </div>
 41. Categorize New Member (7ky)
 <div>
     <script>
-        function openOrSenior(data){
-            return data.map( m => (m[0] > 54 && m[1] > 7 ) ? "Senior" : "Open")
+        function openOrSenior(data) {
+            return data.map(m => (m[0] > 54 && m[1] > 7) ? "Senior" : "Open")
         }
+
         // console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]))
         // return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
     </script>
@@ -701,7 +704,7 @@
         function printerError(s) {
             const sum = Array.from(s).length
             const err = Array.from(s).sort().join().match(/[n-z]/gi)
-            if(err === null) {
+            if (err === null) {
                 return `0/${sum}`
             }
             return `${err.length}/${sum}`
@@ -724,10 +727,28 @@
 43. Regex validate PIN code (7ky)
 <div>
     <script>
-        function validatePIN (pin) {
+        function validatePIN(pin) {
             return !!pin.match(/^(\d{4}|\d{6})$/)
         }
+
         // return /^(\d{4}|\d{6})$/.test(pin)
+    </script>
+</div>
+44. Multiples of 3 or 5 (6ky)
+<div>
+    <script>
+        function solution(number) {
+            let sum = 0;
+            if (number < 0) return 0
+            for (let i = 0; i < number; i++) {
+                if (i % 3 === 0 || i % 5 === 0) {
+                    sum += i
+                }
+            }
+            return sum
+        }
+
+        // console.log(solution(20))
     </script>
 </div>
 </body>

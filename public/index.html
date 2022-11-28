@@ -770,9 +770,29 @@
         function createPhoneNumber(numbers){
             return `(${numbers.slice(0,3).join("")}) ${numbers.slice(3,6).join("")}-${numbers.slice(6).join("")}`
         }
-
-        console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
-        console.log(createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]))
+        // console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+        // console.log(createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]))
+    </script>
+</div>
+47. Even Fibonacci Sum (6ky)
+<div>
+    <script>
+        function fibonacci(max) {
+            let a = 1;
+            let b = 1;
+            let sum = 0;
+            for (let i = b; b < max; i++) {
+                // debugger
+                if (b % 2 === 0){
+                    sum += b
+                }
+                let c = a + b;
+                a = b;
+                b = c;
+            }
+            return sum;
+        }
+        console.log(fibonacci(100))
     </script>
 </div>
 </body>

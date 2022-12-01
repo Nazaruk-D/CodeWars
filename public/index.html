@@ -754,7 +754,7 @@
 45. Stop gninnipS My sdroW! (6ky)
 <div>
     <script>
-        function spinWords(string){
+        function spinWords(string) {
             return string.split(" ").map(w => w.length > 4 ? [...w].reverse().join("") : w).join(" ")
         }
 
@@ -767,9 +767,10 @@
 46. Create Phone Number (6ky)
 <div>
     <script>
-        function createPhoneNumber(numbers){
-            return `(${numbers.slice(0,3).join("")}) ${numbers.slice(3,6).join("")}-${numbers.slice(6).join("")}`
+        function createPhoneNumber(numbers) {
+            return `(${numbers.slice(0, 3).join("")}) ${numbers.slice(3, 6).join("")}-${numbers.slice(6).join("")}`
         }
+
         // console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
         // console.log(createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]))
     </script>
@@ -783,7 +784,7 @@
             let sum = 0;
             for (let i = b; b < max; i++) {
                 // debugger
-                if (b % 2 === 0){
+                if (b % 2 === 0) {
                     sum += b
                 }
                 let c = a + b;
@@ -792,7 +793,22 @@
             }
             return sum;
         }
-        console.log(fibonacci(100))
+
+        // console.log(fibonacci(100))
+    </script>
+</div>
+48. Sum of Digits / Digital Root (6ky)
+<div>
+    <script>
+        function digitalRoot(n) {
+            if (n < 10) {
+                return n
+            }
+            const x = n.toString().split("").reduce((acc, n) => +n + acc, 0)
+            return digitalRoot(x)
+        }
+
+        console.log(digitalRoot(456))
     </script>
 </div>
 </body>

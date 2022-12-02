@@ -808,7 +808,34 @@
             return digitalRoot(x)
         }
 
-        console.log(digitalRoot(456))
+        // console.log(digitalRoot(456))
+    </script>
+</div>
+49. Find the odd int (6ky)
+<div>
+    <script>
+        function findOdd(a) {
+            const newArr = a.sort()
+            let currentNum = newArr[0];
+            let count = 0;
+            for (let i = 0; i < newArr.length ; i++) {
+                if(currentNum === newArr[i]) {
+                    ++count
+                } else {
+                    if(count % 2 !== 0) {
+                        return currentNum
+                    } else {
+                        ++count
+                        currentNum = newArr[i]
+                    }
+                }
+            }
+            return currentNum
+        }
+
+        console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]))
+        console.log(findOdd([0,1,0,1,0]))
+        console.log(findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))
     </script>
 </div>
 </body>

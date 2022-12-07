@@ -875,11 +875,26 @@
         // for (let i = 1; i < n; i++) [prev, curr] = [curr, prev + curr];
         // return prev;
 
-        console.log(nthFibo(1))
-        console.log(nthFibo(2))
-        console.log(nthFibo(3))
-        console.log(nthFibo(4))
-        console.log(nthFibo(5))
+        // console.log(nthFibo(1))
+        // console.log(nthFibo(2))
+        // console.log(nthFibo(3))
+        // console.log(nthFibo(4))
+        // console.log(nthFibo(5))
+    </script>
+</div>
+52. Character with longest consecutive repetition (6ky)
+<div>
+    <script>
+        function longestRepetition(s) {
+            if (s.length === 0) return ["",0]
+            const arr = s.match(/(.)\1*/g).sort((a,b) => b.length - a.length)
+            return [arr[0][0], arr[0].length]
+        }
+
+        console.log(longestRepetition("aaaabb"))
+        console.log(longestRepetition("abbbbb"))
+        console.log(longestRepetition("ba"))
+        console.log(longestRepetition(""))
     </script>
 </div>
 </body>

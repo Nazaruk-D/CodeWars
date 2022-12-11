@@ -891,10 +891,39 @@
             return [arr[0][0], arr[0].length]
         }
 
-        console.log(longestRepetition("aaaabb"))
-        console.log(longestRepetition("abbbbb"))
-        console.log(longestRepetition("ba"))
-        console.log(longestRepetition(""))
+        // console.log(longestRepetition("aaaabb"))
+        // console.log(longestRepetition("abbbbb"))
+        // console.log(longestRepetition("ba"))
+        // console.log(longestRepetition(""))
+    </script>
+</div>
+53. Bouncing Balls (6ky)
+<div>
+    <script>
+        let count = -1;
+        function bouncingBall(h,  bounce,  window) {
+            // debugger
+            let int = 0;
+            if (count === -1 && (h <= 0 || bounce <= 0 || bounce >= 1 || window >= h)) return -1
+            if (count > -1 && h <= window) {
+                int = count
+                count = -1;
+                return int
+            }
+            count = count + 2
+            return bouncingBall(h * bounce, bounce, window)
+        }
+
+        console.log(bouncingBall(30.0, 0.66, 1.5))
+        console.log(bouncingBall(3.0, 0.66, 1.5))
+        console.log(bouncingBall(2.0, 0.5, 1.0))
+
+        // best
+        // function bouncingBall(h,  bounce,  window) {
+        //     var rebounds = -1;
+        //     if (bounce > 0 && bounce < 1) while (h > window) rebounds+=2, h *= bounce;
+        //     return rebounds;
+        // }
     </script>
 </div>
 </body>

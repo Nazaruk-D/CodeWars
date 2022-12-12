@@ -914,9 +914,9 @@
             return bouncingBall(h * bounce, bounce, window)
         }
 
-        console.log(bouncingBall(30.0, 0.66, 1.5))
-        console.log(bouncingBall(3.0, 0.66, 1.5))
-        console.log(bouncingBall(2.0, 0.5, 1.0))
+        // console.log(bouncingBall(30.0, 0.66, 1.5))
+        // console.log(bouncingBall(3.0, 0.66, 1.5))
+        // console.log(bouncingBall(2.0, 0.5, 1.0))
 
         // best
         // function bouncingBall(h,  bounce,  window) {
@@ -924,6 +924,15 @@
         //     if (bounce > 0 && bounce < 1) while (h > window) rebounds+=2, h *= bounce;
         //     return rebounds;
         // }
+    </script>
+</div>
+54. Bit Counting (6ky)
+<div>
+    <script>
+        // const countBits = num => (num >>> 0).toString(2).split("").filter(n => n === "1").length;
+        const countBits = num => num.toString(2).split("").filter(n => n === "1").length;
+        console.log(countBits(9))
+        console.log(countBits(8532767023))
     </script>
 </div>
 </body>

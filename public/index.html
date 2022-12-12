@@ -931,8 +931,32 @@
     <script>
         // const countBits = num => (num >>> 0).toString(2).split("").filter(n => n === "1").length;
         const countBits = num => num.toString(2).split("").filter(n => n === "1").length;
-        console.log(countBits(9))
-        console.log(countBits(8532767023))
+        // console.log(countBits(9))
+        // console.log(countBits(8532767023))
+    </script>
+</div>
+55. Find The Parity Outlier (6ky)
+<div>
+    <script>
+        function findOutlier(integers){
+            let odd = 0;
+            let even = 0;
+            integers[0] % 2 === 0 ? ++even : ++odd
+            integers[1] % 2 === 0 ? ++even : ++odd
+            integers[2] % 2 === 0 ? ++even : ++odd
+            return even > odd ? integers.find(n => n % 2 !== 0) : integers.find(n => n % 2 === 0)
+        }
+
+        //Best practices. But in this solution, we iterate over the array twice, and this is labor intensive.
+        // var even = int.filter(a=>a%2==0);
+        // var odd = int.filter(a=>a%2!==0);
+        // return even.length==1? even[0] : odd[0];
+
+        console.log(findOutlier([2,6,8,10,3]));
+        console.log(findOutlier([1,1,0,1,1]));
+        console.log(findOutlier([0,0,3,0,0]));
+        console.log(findOutlier([1, 2, 3]));
+        console.log(findOutlier([160, 3, 1719, 19, 11, 13, -21]));
     </script>
 </div>
 </body>

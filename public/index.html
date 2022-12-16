@@ -952,11 +952,30 @@
         // var odd = int.filter(a=>a%2!==0);
         // return even.length==1? even[0] : odd[0];
 
-        console.log(findOutlier([2,6,8,10,3]));
-        console.log(findOutlier([1,1,0,1,1]));
-        console.log(findOutlier([0,0,3,0,0]));
-        console.log(findOutlier([1, 2, 3]));
-        console.log(findOutlier([160, 3, 1719, 19, 11, 13, -21]));
+        // console.log(findOutlier([2,6,8,10,3]));
+        // console.log(findOutlier([1,1,0,1,1]));
+        // console.log(findOutlier([0,0,3,0,0]));
+        // console.log(findOutlier([1, 2, 3]));
+        // console.log(findOutlier([160, 3, 1719, 19, 11, 13, -21]));
+    </script>
+</div>
+56. Duplicate Encoder (6ky)
+<div>
+    <script>
+        function duplicateEncode(word){
+            const newArr = word.toLowerCase().split("")
+            const countItems = {}
+            for (const item of newArr) {
+                countItems[item] = countItems[item] ? countItems[item] + 1 : 1;
+            }
+            const result = Object.keys(countItems).filter((item) => countItems[item] > 1);
+            return newArr.map(w => result.includes(w) ? ")" : "(").join("")
+        }
+
+        console.log(duplicateEncode("din"))
+        console.log(duplicateEncode("recede"))
+        console.log(duplicateEncode("Success"))
+        console.log(duplicateEncode("(( @"))
     </script>
 </div>
 </body>

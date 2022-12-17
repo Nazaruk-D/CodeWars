@@ -972,10 +972,23 @@
             return newArr.map(w => result.includes(w) ? ")" : "(").join("")
         }
 
-        console.log(duplicateEncode("din"))
-        console.log(duplicateEncode("recede"))
-        console.log(duplicateEncode("Success"))
-        console.log(duplicateEncode("(( @"))
+        // console.log(duplicateEncode("din"))
+        // console.log(duplicateEncode("recede"))
+        // console.log(duplicateEncode("Success"))
+        // console.log(duplicateEncode("(( @"))
+    </script>
+</div>
+57. Replace With Alphabet Position (6ky)
+<div>
+    <script>
+        function alphabetPosition(text) {
+            return text.toLowerCase().replace(/[^a-z]/g, '').split("").map(l => l.charCodeAt(0) - 96).join(" ");
+        }
+
+        console.log(alphabetPosition("T"))
+        console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+        console.log(alphabetPosition("The narwhal bacons at midnight."))
+        console.log(alphabetPosition("-51 -51"))
     </script>
 </div>
 </body>
